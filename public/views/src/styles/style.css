@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+body * {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+.RMQ-wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.RMQ-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    
+}
+
+.RMQ-body__header {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgb(238,238,238);
+}
+
+.RMQ-body__header--title {
+    font-size: 18px;
+    color: rgb(119,119,119)
+}
+
+.RMQ-body__header--button {
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 5px;
+    color: rgb(255,255,255);
+    background-color: rgb(51, 122, 183);
+}
+
+.RMQ-body__app {
+    width: 550px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    background-color: rgb(238,238,238);
+    margin: 20px 0;
+    border-top: 1px solid rgb(238,238,238);
+}
+
+.RMQ-body__app--title {
+    font-size: 48px;
+}
+
+.RMQ-moneyInput {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+.RMQ-moneyInput > label {
+    margin-right: 10px;
+}
+
+.RMQ-moneyInput > input {
+    height: 30px;
+    width: 200px;
+}
+
+.RMQ-body__app--pay {
+    
+    margin-top: 15px;
+    padding: 15px 20px;
+    font-size: 20px;
+    border: 1px solid rgb(205,205,205);
+    border-radius: 5px;
+    background-color: rgb(255,255,255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.RMQ-body__app--pay > svg {
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+}
+
+.RMQ-body__footer {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgb(238,238,238);
+    font-size: 14px;
+    color: rgb(119,119,119);
+}
