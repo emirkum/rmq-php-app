@@ -1,7 +1,6 @@
 <?php
 
-$loader = require __DIR__ . '/../../vendor/autoload.php';
-$loader->addPsr4('RMQPHP\\', __DIR__);
+require __DIR__ . '../../vendor/autoload.php';
 
 /**
  * Requests entrance
