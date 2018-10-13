@@ -1,6 +1,6 @@
 FROM php:7.1-apache
 
-COPY . /var/www/html/app-rabbitmq
-WORKDIR /var/www/html/app-rabbitmq
+COPY . /app-rabbitmq
+WORKDIR /app-rabbitmq
 
 EXPOSE 8080

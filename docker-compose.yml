@@ -1,5 +1,4 @@
 version: '3'
-
 services:
   app-rabbitmq:
     image: mujic0000/app-rabbitmq:v1.0
