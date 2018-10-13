@@ -6,7 +6,7 @@ $(document).ready(function () {
         if(amount != '' && host != ''){
             $.ajax({
                 method: "POST",
-                url: host + '/RMQPHP-APP/router.php',
+                url: host + '/router.php',
                 data: {
                     route: "sendPayment",
                     body: {
