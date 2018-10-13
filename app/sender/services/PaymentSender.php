@@ -5,7 +5,7 @@ namespace RMQPHP\App\Sender\Services;
 
 use RMQPHP\App\Http\Payloads\PayloadJSON;
 use RMQPHP\App\Entity\Payment;
-use RMQPHP\app\sender\amqp\RMQ;
+use RMQPHP\App\Sender\Amqp\RMQ;
 use RMQPHP\App\Sender\ISender;
 
 /**
