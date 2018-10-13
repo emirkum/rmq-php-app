@@ -2,5 +2,6 @@ FROM php:7.1-apache
 
 COPY . /app-rabbitmq
 WORKDIR /app-rabbitmq
+CMD [ "composer update" ]
 
 EXPOSE 8080
