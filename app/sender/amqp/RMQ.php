@@ -11,25 +11,6 @@ use RMQPHP\App\Sender\AMQP;
 
 class RMQ implements AMQP
 {
-    /**
-     * @var string  RabbitMQ Host name
-     */
-    const RMQHOST = 'localhost';
-
-    /**
-     * @var int RabbitMQ Port
-     */
-    const RMQPORT = 5672;
-
-    /**
-     * @var string  RabbitMQ User name
-     */
-    const RMQUSER = 'guest';
-
-    /**
-     * @var string  RabbitMQ Password
-     */
-    const RMQPASSWORD = 'guest';
 
     /**
      * @var string  RabbitMQ Queue name
@@ -58,10 +39,10 @@ class RMQ implements AMQP
      */
     public function setupConn() : bool {
         $this->setConnection(new AMQPStreamConnection(
-            self::RMQHOST,
-            self::RMQPORT,
-            self::RMQUSER,
-            self::RMQPASSWORD
+            getenv('RMQHOST'),
+            getenv('RMQPORT'),
+            getenv('RMQUSER'),
+            getenv('RMQPASSWORD')
             )
         );
 

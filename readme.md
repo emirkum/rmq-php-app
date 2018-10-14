@@ -1,6 +1,5 @@
 ## RMQ-PHP-APP
-`docker exec -it CID /bin/bash`
 
-`$ cp ./vhost.conf /etc/apache2/sites-available/000-default.conf`
+`docker build -t rmq-php-app .`
 
-`$ service apache2 restart`
+`docker run -p 8080:80 rmq-php-app`
