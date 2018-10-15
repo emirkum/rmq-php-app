@@ -9,12 +9,6 @@ require __DIR__ . '../../vendor/autoload.php';
 use RMQPHP\App\Router;
 use RMQPHP\App\Exceptions\UnsupportedRequestType;
 use RMQPHP\App\Validators\Validate;
-use josegonzalez\Dotenv\Loader;
-
-$overwrite = true;
-$Loader = (new josegonzalez\Dotenv\Loader('../.env'))
-              ->parse()
-              ->putenv($overwriteENV);
               
 $router = new Router();
 $router->setRequest(new \RMQPHP\App\Http\Request());

@@ -1,21 +1,19 @@
-FROM limogin/php-7.1-apache
+FROM ulsmith/alpine-apache-php7
 
-COPY . /srv/app
+COPY . /app/
 
-RUN apt-get update && \
-    apt-get install -y --no-install-recommends git
+RUN chown -R apache:apache /app/
 
-RUN chown -R www-data:www-data /srv/app \
-    && a2enmod rewrite
+ADD https://php.codecasts.rocks/php-alpine.rsa.pub /etc/apk/keys/php-alpine.rsa.pub
+RUN apk --update add ca-certificates
+RUN echo "@php https://php.codecasts.rocks/v3.8/php-7.2" >> /etc/apk/repositories
+RUN apk add --update php@php
+RUN apk add --update php-mbstring@php
 
-WORKDIR /srv/app
+WORKDIR /app
 
 RUN curl --silent --show-error https://getcomposer.org/installer | php
 
-RUN php composer.phar install --no-dev
+RUN php -v && php composer.phar install --no-dev
 
 EXPOSE 5672
-
-ENTRYPOINT cp ./vhost.conf /etc/apache2/sites-available/000-default.conf \
-            && service apache2 stop && service apache2 start \
-            && tailf /var/log/apache2/error.log
