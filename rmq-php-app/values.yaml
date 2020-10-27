@@ -47,6 +47,7 @@ tolerations: []
 
 affinity: {}
 
+# Needs to be moved to secret
 RMQ: 
   host: cmFiYml0bXEtc2VydmVy
   port: NTY3Mg==
